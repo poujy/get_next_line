@@ -6,7 +6,7 @@
 /*   By: jquer <jquer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 09:33:19 by username          #+#    #+#             */
-/*   Updated: 2026/11/26 15:34:12 by jquer            ###   ########.fr       */
+/*   Updated: 2026/11/26 16:18:44 by jquer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*gnl_substr(const char *s, size_t start, size_t len)
 	return (res);
 }
 
-size_t	gnl_strlcat(char *dest, const char *src, size_t destsize)
+static size_t	gnl_strlcat(char *dest, const char *src, size_t destsize)
 {
 	size_t	dest_len;
 	size_t	src_len;
