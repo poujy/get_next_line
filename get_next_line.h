@@ -6,7 +6,7 @@
 /*   By: jquer <jquer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 09:35:18 by username          #+#    #+#             */
-/*   Updated: 2026/11/26 09:50:01 by jquer            ###   ########.fr       */
+/*   Updated: 2026/11/26 15:35:08 by jquer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 char	*get_next_line(int fd);
 size_t	gnl_strlen(const char *str);
 char	*gnl_strchr(const char *str, int c);
-char	*gnl_strjoin(char *stock, char *buf);
+char	*gnl_strjoin(char const *s1, char const *s2);
 char	*gnl_substr(const char *str, size_t start, size_t len);
 
 #endif
