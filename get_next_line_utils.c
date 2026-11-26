@@ -6,7 +6,7 @@
 /*   By: jquer <jquer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/26 09:33:19 by username          #+#    #+#             */
-/*   Updated: 2026/11/26 09:55:43 by jquer            ###   ########.fr       */
+/*   Updated: 2026/11/26 14:20:53 by jquer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	gnl_strlen(const char *str)
 
 	i = 0;
 	if (str == NULL)
-		return (NULL);
+		return (0);
 	while (str[i] != '\0')
 		i++;
 	return (i);
@@ -26,6 +26,8 @@ size_t	gnl_strlen(const char *str)
 
 char	*gnl_strchr(const char *str, int ch)
 {
+	if (str == NULL)
+		return (NULL);
 	while (*str && *str != (char) ch)
 	{
 		str++;
@@ -37,7 +39,7 @@ char	*gnl_strchr(const char *str, int ch)
 	return (NULL);
 }
 
-char	*gnl_substr(char const *s, unsigned int start, size_t len)
+char	*gnl_substr(const char *s, size_t start, size_t len)
 {
 	size_t	n;
 	char	*res;
@@ -92,8 +94,8 @@ char	*gnl_strjoin(char const *s1, char const *s2)
 	size_t	b;
 	char	*res;
 
-	a = ft_strlen(s1);
-	b = ft_strlen(s2);
+	a = gnl_strlen(s1);
+	b = gnl_strlen(s2);
 	res = malloc((a + b) + 1);
 	if (res == NULL)
 		return (NULL);
